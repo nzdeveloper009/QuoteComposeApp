@@ -25,12 +25,12 @@ import com.nzdeveloper009.quotecomposeapp.R
 import com.nzdeveloper009.quotecomposeapp.models.Quote
 
 @Composable
-fun QuoteListItem(quote: Quote, onClick: () -> Unit) {
+fun QuoteListItem(quote: Quote, onClick: (quote:Quote) -> Unit) {
     Card(
         elevation = 4.dp,
         modifier = Modifier
             .padding(8.dp)
-            .clickable { onClick }
+            .clickable { onClick(quote) }
     ) {
         Row(
             modifier = Modifier.padding(16.dp)
